@@ -19,7 +19,7 @@
         	</form>	
 
            
-    
+    <?php
     try
     {
     $bdd = new PDO('mysql:host=localhost;dbname=databaselaw', 'root', '');
@@ -38,17 +38,6 @@
         ));
 
     echo "Enregistrement éffectué avec succès!!!";
-
-}
-    else 
-    {
-        echo "Les mots de passe ne correspondent pas...veuillez réessayer </br>"
-        ?>
-        <h4>Réessayer</h4>
-        <?php
-    }
-}
-
-
+    
 ?>
     

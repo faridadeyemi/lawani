@@ -3,7 +3,7 @@
 session_start();
 if (!empty($_SESSION['iduser'])) {
     $iduser = $_SESSION['iduser'];
-    echo $iduser;
+   
 }
  else {
 header('location:authentification.php');    

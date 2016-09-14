@@ -17,7 +17,7 @@ if (!empty($_SESSION['iduser'])) {
             Lawani ETS
         </title>
         <div style="display:flex"; id="menu">
-            <legend>  
+            <legend>
                 LAWANI ETS
             </legend>
             <div id="reseau">
@@ -27,7 +27,7 @@ if (!empty($_SESSION['iduser'])) {
 
                 <a>
                     <img src="twitter.jpg" class="res"/>
-                </a>				
+                </a>
                 <a>
                     <img src="mail.png"class="res"/>
                 </a>
@@ -40,16 +40,38 @@ if (!empty($_SESSION['iduser'])) {
     </head>
 
     <body >
-         <p>Selectionner un numero de série :</p>
-        
-       
-	
 
+
+        <form method="POST" action="modif.php" >
+            <p>Selectionner un numero de série :</p>
+            <select name="numserie">
+                <?php
+                try {
+                    $bdd = new PDO('mysql:host=localhost;dbname=databaselaw', 'root', '');
+                } catch (Exception $e) {
+                    die('Erreur : ' . $e->getMessage());
+                }
+                $req = $bdd->query('SELECT numserie,ref FROM lawani');
+                while ($donnees = $req->fetch()) {
+                    ?>
+                    <option value = "<?php echo $donnees['numserie']; ?>"> <?php echo $donnees['ref'];
+                    ?></option>
+                    <?php
+                }
+                ?>
+            </select>
+            <input type = "submit" value="valider"/>
+        </form>
+
+        
+           
+        
+        
 
     </body>
     <hr/>
     <footer style="background:#111;color:#fff;padding:10px;text-align:center"style="color:#fff">
-        Mentions légales</a> - 183 avenue du travail - 92024 boite postal - Tél. +229 85258525 - Fax 89652365 
+        Mentions légales</a> - 183 avenue du travail - 92024 boite postal - Tél. +229 85258525 - Fax 89652365
     </footer>
 
 </html>

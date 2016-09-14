@@ -1,10 +1,11 @@
 <?php
 	session_start();
 echo $_SESSION['iduser'];
-if (empty($_SESSION['iduser']))
+if (!empty($_SESSION['iduser']))
 {
 	$iduser=$_SESSION['iduser'];
-
+}
+else{
 	header('location:authentification.php');
 }
 ?>

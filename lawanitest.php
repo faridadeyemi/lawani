@@ -1,9 +1,18 @@
 <?php
 session_start();
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    <head >
+     <link rel="stylesheet" type="text/css" href="style.css">
+       <meta http-equiv="Content-Type" content="text/html;
+   charset=utf-8" " />
+       </head >
+     <?php  
 if (!empty($_SESSION['iduser']))
 {
 	$iduser=$_SESSION['iduser'];
-	echo $iduser;
+	
 
 }
  if
@@ -48,6 +57,6 @@ else
 	<a href="lawaniets.php">Veuillez réessayer!</a>
 	<?php
 }
-
-
+?>
+</html >
 ?>
