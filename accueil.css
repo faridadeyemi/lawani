@@ -1,0 +1,64 @@
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 10px;
+	margin-left: 10px;
+
+}
+
+nav a
+{
+    font-size: 30px;
+    
+	background-color: write;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover,nav li.active
+{
+    color: #760001;
+    border-bottom: 2px solid #760001;
+}
+.menu
+{
+    border: 5px  black solid;
+width: 60%;
+  
+    margin-top:10px;
+}
+
+.menu  a
+{
+    color:black;
+}
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 50px;
+    height: 50px;
+    border: 1px  black solid;
+}
+#reseau
+{
+   width: 45%;
+    margin: auto;
+}
+.res
+{
+    border: 1px  write solid;
+    height:30px;
+    width:30px;
+    float:end;
+}
